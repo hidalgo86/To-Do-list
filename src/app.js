@@ -1,0 +1,23 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const taskRoutes = require('./routes/tasks');
+
+const app = express();
+
+// Middleware
+app.use(bodyParser.json());
+app.use(cors());
+app.use('/api/tasks', taskRoutes);
+
+// Conexión a MongoDB
+mongoose.connect('mongodb://127.0.0.1:27017/todolist', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => console.log("Conectado a MongoDB"))
+  .catch(err => console.error("Error al conectar a MongoDB", err));
+
+// Inicio del servidor
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
