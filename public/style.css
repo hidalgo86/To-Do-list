@@ -1,16 +1,129 @@
+  /* Estilo general */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f7f7f7;
-    padding: 20px;
-  }
-  
-  form {
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Contenedor principal */
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+h1 {
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Lista de tareas */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #ffffff;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #f9f9f9;
+}
+
+/* Botones de tarea */
+li button {
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+li button:hover {
+  background-color: #c0392b;
+}
+
+li button.edit {
+  background-color: #f39c12;
+}
+
+li button.edit:hover {
+  background-color: #d35400;
+}
+
+/* Mensaje de error */
+#error-message {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 10px;
+  display: none;
+}
+
+#error-message.hidden {
+  display: none;
+}
+
+/* Pie de página */
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+footer p {
+  margin: 0;
+}
+
   
