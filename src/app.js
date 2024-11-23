@@ -20,7 +20,7 @@ console.log("proceso.......", process.env.URI)
 console.log("proceso.......", process.env.KEY)
 console.log("proceso.......", process.env)
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("Conectado a MongoDB"))
   .catch((err) => console.error("Error al conectar a MongoDB", err));
 
