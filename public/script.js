@@ -124,6 +124,6 @@ const defaultSubmit = async (e) => {
 };
 
 document.getElementById("task-form").onsubmit = defaultSubmit;
-
+console.log("MONGO_URI", process.env.MONGO_URI)
 // Inicializar lista de tareas
 fetchTasks();
