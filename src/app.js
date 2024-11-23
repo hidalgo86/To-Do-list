@@ -16,9 +16,6 @@ app.use("/api/tasks", taskRoutes);
 app.use(express.static(path.join(__dirname, '../public')));
 
 // Conexión a MongoDB
-console.log("proceso.......", process.env.URI)
-console.log("proceso.......", process.env.KEY)
-console.log("proceso.......", process.env)
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => console.log("Conectado a MongoDB"))
