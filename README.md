@@ -1,7 +1,7 @@
 
 # ToDo List App
 
-Una aplicación web sencilla y funcional para gestionar tareas diarias. Esta aplicación destaca tus habilidades en desarrollo frontend y backend, ideal para mostrar en tu portafolio profesional.
+Una aplicación web sencilla y funcional para gestionar tareas diarias.
 
 ## 📋 Descripción
 
@@ -12,7 +12,7 @@ La **ToDo List App** es una aplicación que permite a los usuarios organizar sus
 - **Agregar Tareas**: Permite añadir nuevas tareas a la lista.
 - **Editar Tareas**: Modifica las tareas existentes.
 - **Eliminar Tareas**: Elimina tareas que ya no son necesarias.
-- **Marcar como Completadas**: Indica visualmente las tareas finalizadas.
+- **Marcar como completadas**:  Indica visualmente las tareas finalizadas.
 - **API Backend**: Implementación de rutas para gestionar tareas mediante Node.js y MongoDB.
 
 ## 🛠️ Tecnologías Utilizadas
@@ -38,7 +38,7 @@ project/
 ├── routes/
 │   └── tasks.js      # Rutas CRUD para la API
 │
-├── server.js         # Configuración principal del servidor
+├── app.js            # Configuración principal del servidor
 └── README.md         # Documentación del proyecto
 ```
 
@@ -97,7 +97,7 @@ project/
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tuusuario/todolist.git
+   git clone https://github.com/hidalgo86/To-Do-list
    cd todolist
    ```
 
@@ -134,7 +134,7 @@ project/
 
 ### Página Principal
 
-![ToDo List UI](https://via.placeholder.com/800x400)  
+![ToDo List UI](./image/app.png)  
 *Interfaz limpia y minimalista para gestionar tareas.*
 
 ## 🤝 Contribuciones
@@ -154,4 +154,4 @@ Este proyecto está bajo la licencia **MIT**. Consulta el archivo `LICENSE` para
 ## 📧 Contacto
 
 Desarrollado por **Eduardo Hidalgo**.  
-Para más información, contáctame en: [eduardo@example.com](mailto:eduardohidalgo@example.com).
+Para más información, contáctame en: [hidalgojose86@gmail.com](mailto:hidalgojose86@gmail.com).

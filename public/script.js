@@ -32,12 +32,12 @@ async function deleteTask(id) {
 }
 
 // Actualizar una tarea
-async function updateTask(id, newDescription) {
+async function updateTask(id, updates) {
   try {
     const response = await fetch(`${apiUrl}/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ description: newDescription }),
+      body: JSON.stringify(updates),
     });
     await handleResponse(response);
     fetchTasks();
@@ -60,6 +60,15 @@ async function fetchTasks() {
       li.textContent = task.description;
       if (task.completed) li.style.textDecoration = "line-through";
 
+      // Checkbox para marcar como completado
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = task.completed;
+      checkbox.style.marginRight = "10px";
+      checkbox.addEventListener("change", async () => {
+        await updateTask(task._id, { completed: checkbox.checked });
+      });
+
       // Botón de eliminar
       const deleteButton = document.createElement("button");
       deleteButton.textContent = "Eliminar";
@@ -79,12 +88,13 @@ async function fetchTasks() {
 
         document.getElementById("task-form").onsubmit = async (e) => {
           e.preventDefault();
-          await updateTask(task._id, taskInput.value);
+          await updateTask(task._id, { description: taskInput.value });
           taskInput.value = "";
           document.getElementById("task-form").onsubmit = defaultSubmit;
         };
       });
 
+      li.prepend(checkbox);
       li.appendChild(deleteButton);
       li.appendChild(editButton);
       taskList.appendChild(li);
