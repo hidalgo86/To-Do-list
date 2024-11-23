@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "MONGO_URI=mongodb+srv://hidalgojose86:4zTtxjO02mTT5q0s@cluster0.mvxjv.mongodb.net/ node src/app.js"
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
